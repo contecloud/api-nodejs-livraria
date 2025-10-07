@@ -8,13 +8,13 @@ services:
       MONGO_INITDB_ROOT_USERNAME: user
       MONGO_INITDB_ROOT_PASSWORD: teste123
 
-  # mongo-express:
-  #   image: mongo-express
-  #   restart: always
-  #   ports:
-  #     - 8081:8081
-  #   environment:
-  #     ME_CONFIG_MONGODB_URL: mongodb://root:example@mongo:27017/
-  #     ME_CONFIG_BASICAUTH_ENABLED: true
-  #     ME_CONFIG_BASICAUTH_USERNAME: user
-  #     ME_CONFIG_BASICAUTH_PASSWORD: teste123
+  mongo-express:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    environment:
+      ME_CONFIG_MONGODB_URL: mongodb://user:teste123@mongo:27017/
+      ME_CONFIG_BASICAUTH_ENABLED: true
+      ME_CONFIG_BASICAUTH_USERNAME: user
+      ME_CONFIG_BASICAUTH_PASSWORD: teste123
